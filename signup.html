@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="signstyle.css">
+    <script src="https://kit.fontawesome.com/fb797a1ab9.js" crossorigin="anonymous"></script>
+    <title>PU Gym Login Page</title>
+</head>
+
+<script>
+    // Check for an error message in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+
+    // Display an alert if there's an error
+    if (error) {
+        alert(error);
+    }
+</script>
+
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="Image/logo-pu2.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">We Offer</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallary">Gallery</a></li>
+                <li><a href="#pricingsec">Price</a></li>
+                <li><a href="#footer-base">Contact Us</a></li>
+                <li><a class="active" href="login.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </div>
+    </section>
+<section class="loginsec" id="loginsec">
+    <div class="container" id="container">
+        <form action="process_form.php" method="POST">
+                <h1 id="signuph1">Sign Up</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <input type="text" name="username" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="collagename" placeholder="Collage Name">
+                 <!-- Adding a select dropdown for year -->
+                 <select name="year" id="year">
+                    <option value="1st">1st Year</option>
+                    <option value="2nd">2nd Year</option>
+                    <option value="3rd">3rd Year</option>
+                    <option value="4th">4th Year</option>
+                </select>
+
+                <select name="timing" id="takeTheBatch">
+                    <option value="4:00 am">4:00 am to 5:00 am</option>
+    <option value="5:00 am">5:00 am to 6:00 am</option>
+    <option value="6:00 am">6:00 am to 7:00 am</option>
+    <option value="7:00 am">7:00 am to 8:00 am</option>
+    <option value="8:00 am">8:00 am to 9:00 am</option>
+    <option value="9:00 am">9:00 am to 10:00 am</option>
+    <option value="10:00 am">10:00 am to 11:00 am</option>
+    <option value="11:00 am">11:00 am to 12:00 pm</option>
+    <option value="12:00 pm">12:00 pm to 1:00 pm</option>
+    <option value="1:00 pm">1:00 pm to 2:00 pm</option>
+    <option value="2:00 pm">2:00 pm to 3:00 pm</option>
+    <option value="3:00 pm">3:00 pm to 4:00 pm</option>
+    <option value="4:00 pm">4:00 pm to 5:00 pm</option>
+    <option value="5:00 pm">5:00 pm to 6:00 pm</option>
+    <option value="6:00 pm">6:00 pm to 7:00 pm</option>
+    <option value="7:00 pm">7:00 pm to 8:00 pm</option>
+                </select>
+            
+                <button type="submit" method="post" id="Savebutton">Pay Now</button>
+            </form>
+    
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
